@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainScreenFragment">
+
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="com.aa.elementalcrush.MainScreenFragment"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreenFragment_to_playScreenFragment"
+            app:destination="@id/playScreenFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_helpScreenFragment"
+            app:destination="@id/helpScreenFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_discoveryScreenFragment"
+            app:destination="@id/discoveryScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpScreenFragment"
+        android:name="com.aa.elementalcrush.HelpScreenFragment"
+        android:label="fragment_help_screen"
+        tools:layout="@layout/fragment_help_screen" >
+        <action
+            android:id="@+id/action_helpScreenFragment_to_playScreenFragment"
+            app:destination="@id/playScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playScreenFragment"
+        android:name="com.aa.elementalcrush.PlayScreenFragment"
+        android:label="fragment_play_screen"
+        tools:layout="@layout/fragment_play_screen" >
+        <action
+            android:id="@+id/action_playScreenFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+        <action
+            android:id="@+id/action_playScreenFragment_to_endScreenFragment"
+            app:destination="@id/endScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/discoveryScreenFragment"
+        android:name="com.aa.elementalcrush.DiscoveryScreenFragment"
+        android:label="fragment_discovery_screen"
+        tools:layout="@layout/fragment_discovery_screen" />
+    <fragment
+        android:id="@+id/endScreenFragment"
+        android:name="com.aa.elementalcrush.EndScreenFragment"
+        android:label="fragment_end_screen"
+        tools:layout="@layout/fragment_end_screen" >
+        <action
+            android:id="@+id/action_endScreenFragment_to_discoveryScreenFragment"
+            app:destination="@id/discoveryScreenFragment" />
+        <action
+            android:id="@+id/action_endScreenFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+    </fragment>
+</navigation>
